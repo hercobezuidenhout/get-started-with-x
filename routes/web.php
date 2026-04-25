@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\Login;
 use App\Http\Controllers\Auth\Logout;
 use App\Http\Controllers\Auth\Register;
 use App\Http\Controllers\ChirpController;
@@ -13,7 +14,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/chirps/{chirp}', [ChirpController::class, 'destroy']);
 });
 
-
 // REGISTER ROUTES
 Route::view('/register', 'auth.register')
     ->middleware('guest')
@@ -25,3 +25,11 @@ Route::post('/register', Register::class)
 // LOGOUT
 Route::post('/logout', Logout::class)
     ->middleware('auth');
+
+// LOGIN
+Route::view('/login', 'auth.login')
+    ->middleware('guest')
+    ->name('login');
+
+Route::post('/login', Login::class)
+    ->middleware('guest');
