@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->nullable()->constrained()->cascadeOnDelete();
             $table->string('message', 255);
             $table->timestamps();
-        });
+        }); 
     }
 
     /**
