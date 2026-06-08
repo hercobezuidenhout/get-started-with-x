@@ -11,3 +11,4 @@ Instead of living with thousands of Github repos, I decided to put all of these 
 ## Projects
 
 - [Chirper - A Laravel project](./chirper/README.md)
+- [Hello Rust - A Rust project](./hello-rust/README.md)
